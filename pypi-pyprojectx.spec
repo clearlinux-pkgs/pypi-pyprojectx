@@ -4,7 +4,7 @@
 #
 Name     : pypi-pyprojectx
 Version  : 0.9.1
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/de/51/2afe0f2cd0ce24cf0a58cf22b92dc06c5aaa23d6278aaaf112b628dd7daf/pyprojectx-0.9.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/de/51/2afe0f2cd0ce24cf0a58cf22b92dc06c5aaa23d6278aaaf112b628dd7daf/pyprojectx-0.9.1.tar.gz
 Summary  : Execute scripts from pyproject.toml, installing tools on-the-fly
