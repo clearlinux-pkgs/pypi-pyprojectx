@@ -4,7 +4,7 @@
 #
 Name     : pypi-pyprojectx
 Version  : 0.9.9
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/57/12/731ece00de8dba7020eb5f6022a7a68f1fd1ccf7cb90f6a023038b38cdec/pyprojectx-0.9.9.tar.gz
 Source0  : https://files.pythonhosted.org/packages/57/12/731ece00de8dba7020eb5f6022a7a68f1fd1ccf7cb90f6a023038b38cdec/pyprojectx-0.9.9.tar.gz
 Summary  : Execute scripts from pyproject.toml, installing tools on-the-fly
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656382743
+export SOURCE_DATE_EPOCH=1656399559
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
