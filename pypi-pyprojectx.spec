@@ -5,7 +5,7 @@
 #
 Name     : pypi-pyprojectx
 Version  : 1.0.1
-Release  : 15
+Release  : 16
 URL      : https://files.pythonhosted.org/packages/2e/f0/64d285773a10d944892a6f72ed2f163bf13dd27fadb9bf5d6bcf0a6db855/pyprojectx-1.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2e/f0/64d285773a10d944892a6f72ed2f163bf13dd27fadb9bf5d6bcf0a6db855/pyprojectx-1.0.1.tar.gz
 Summary  : Execute scripts from pyproject.toml, installing tools on-the-fly
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1687199419
+export SOURCE_DATE_EPOCH=1688679604
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -93,6 +93,7 @@ export MAKEFLAGS=%{?_smp_mflags}
 pypi-dep-fix.py . filelock
 pypi-dep-fix.py . platformdirs
 pypi-dep-fix.py . virtualenv
+pypi-dep-fix.py . click
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
 export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
@@ -103,6 +104,7 @@ export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 pypi-dep-fix.py . filelock
 pypi-dep-fix.py . platformdirs
 pypi-dep-fix.py . virtualenv
+pypi-dep-fix.py . click
 python3 -m build --wheel --skip-dependency-check --no-isolation
 
 popd
@@ -116,6 +118,7 @@ pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 pypi-dep-fix.py %{buildroot} filelock
 pypi-dep-fix.py %{buildroot} platformdirs
 pypi-dep-fix.py %{buildroot} virtualenv
+pypi-dep-fix.py %{buildroot} click
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
