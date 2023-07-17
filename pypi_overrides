@@ -2,3 +2,4 @@ filelock
 platformdirs
 virtualenv
 click
+distlib
