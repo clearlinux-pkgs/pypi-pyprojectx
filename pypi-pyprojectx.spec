@@ -5,7 +5,7 @@
 #
 Name     : pypi-pyprojectx
 Version  : 1.0.1
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/2e/f0/64d285773a10d944892a6f72ed2f163bf13dd27fadb9bf5d6bcf0a6db855/pyprojectx-1.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2e/f0/64d285773a10d944892a6f72ed2f163bf13dd27fadb9bf5d6bcf0a6db855/pyprojectx-1.0.1.tar.gz
 Summary  : Execute scripts from pyproject.toml, installing tools on-the-fly
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689618686
+export SOURCE_DATE_EPOCH=1689696037
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -95,6 +95,7 @@ pypi-dep-fix.py . platformdirs
 pypi-dep-fix.py . virtualenv
 pypi-dep-fix.py . click
 pypi-dep-fix.py . distlib
+pypi-dep-fix.py . userpath
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
 export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
@@ -107,6 +108,7 @@ pypi-dep-fix.py . platformdirs
 pypi-dep-fix.py . virtualenv
 pypi-dep-fix.py . click
 pypi-dep-fix.py . distlib
+pypi-dep-fix.py . userpath
 python3 -m build --wheel --skip-dependency-check --no-isolation
 
 popd
@@ -122,6 +124,7 @@ pypi-dep-fix.py %{buildroot} platformdirs
 pypi-dep-fix.py %{buildroot} virtualenv
 pypi-dep-fix.py %{buildroot} click
 pypi-dep-fix.py %{buildroot} distlib
+pypi-dep-fix.py %{buildroot} userpath
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----

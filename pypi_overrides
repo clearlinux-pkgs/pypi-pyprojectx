@@ -3,3 +3,4 @@ platformdirs
 virtualenv
 click
 distlib
+userpath 
