@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pyprojectx
-URL = https://files.pythonhosted.org/packages/6d/8c/b3256168e6591f583e76c28694a45323fc6a1527a2986b9554bc351aefa4/pyprojectx-2.0.0.tar.gz
+URL = https://files.pythonhosted.org/packages/cc/f4/afcc6cd11e8e8c7a5e6c9445862f77135ba3fbff78fe21a5ed8d97ea2e3d/pyprojectx-2.0.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
