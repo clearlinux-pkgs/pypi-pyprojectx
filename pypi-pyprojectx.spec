@@ -6,10 +6,10 @@
 # autospec commit: ab27b0e
 #
 Name     : pypi-pyprojectx
-Version  : 2.0.1
-Release  : 22
-URL      : https://files.pythonhosted.org/packages/cc/f4/afcc6cd11e8e8c7a5e6c9445862f77135ba3fbff78fe21a5ed8d97ea2e3d/pyprojectx-2.0.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/cc/f4/afcc6cd11e8e8c7a5e6c9445862f77135ba3fbff78fe21a5ed8d97ea2e3d/pyprojectx-2.0.1.tar.gz
+Version  : 2.0.2
+Release  : 23
+URL      : https://files.pythonhosted.org/packages/b0/4c/1b7700a7c9ce84464c15187089fba251955be6ec35bf0292de391687409d/pyprojectx-2.0.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/b0/4c/1b7700a7c9ce84464c15187089fba251955be6ec35bf0292de391687409d/pyprojectx-2.0.2.tar.gz
 Summary  : Execute scripts from pyproject.toml, installing tools on-the-fly
 Group    : Development/Tools
 License  : MIT
@@ -71,10 +71,10 @@ python3 components for the pypi-pyprojectx package.
 
 
 %prep
-%setup -q -n pyprojectx-2.0.1
-cd %{_builddir}/pyprojectx-2.0.1
+%setup -q -n pyprojectx-2.0.2
+cd %{_builddir}/pyprojectx-2.0.2
 pushd ..
-cp -a pyprojectx-2.0.1 buildavx2
+cp -a pyprojectx-2.0.2 buildavx2
 popd
 
 %build
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1704729015
+export SOURCE_DATE_EPOCH=1704902621
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
